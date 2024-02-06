@@ -1,7 +1,7 @@
-import InputText from './InputText'
-import InputUrl from './InputUrl'
+import InputText from "./InputText";
+import InputUrl from "./InputUrl";
 
-function Info() {
+function Info({ changeData }) {
   return (
     <>
       <h2 className="title">Información</h2>
@@ -11,28 +11,33 @@ function Info() {
           name="name"
           id="name"
           placeholder="Nombre del proyecto"
+          changeData={changeData}
         />
         <InputText
           name="slogan"
           id="slogan"
           placeholder="Slogan"
+          changeData={changeData}
         />
         <div className="addForm__2col">
           <InputUrl
             name="repo"
             id="repo"
             placeholder="Repositorio"
+            changeData={changeData}
           />
           <InputUrl
             name="demo"
             id="demo"
             placeholder="Demo"
+            changeData={changeData}
           />
         </div>
         <InputText
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
+          changeData={changeData}
         />
         <textarea
           className="addForm__input"

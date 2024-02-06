@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 
-function InputText(props) {
+function InputText({ changeData }) {
+  const handleInput = (event) => {
+    const userValue = event.currentTarget.value;
+  };
   return (
     <input
       className="addForm__input"
