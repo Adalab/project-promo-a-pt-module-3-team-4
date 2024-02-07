@@ -1,7 +1,7 @@
 import InputText from "./InputText";
 import InputUrl from "./InputUrl";
 
-function Info() {
+function Info({ changeData }) {
   return (
     <>
       <h2 className="title">Información</h2>
@@ -17,6 +17,7 @@ function Info() {
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
+          changeData={changeData}
         />
         <textarea
           className="addForm__input"
