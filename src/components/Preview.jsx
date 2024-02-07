@@ -1,10 +1,10 @@
 import Card from "./Card";
 
-function Preview() {
+function Preview({ data }) {
   return (
     <section className="preview">
       <div className="projectImage"></div>
-      <Card />
+      <Card data={data} />
     </section>
   );
 }

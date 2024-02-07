@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 
-function InputText({ changeData }) {
-  const handleInput = (event) => {
-    const userValue = event.currentTarget.value;
-  };
+function InputText(props) {
   return (
     <input
       className="addForm__input"
@@ -12,6 +9,7 @@ function InputText({ changeData }) {
       id={props.id}
       placeholder={props.placeholder}
       value={props.value}
+      onChange={props.onChange}
     />
   );
 }

@@ -1,4 +1,4 @@
-function Card() {
+function Card({ data }) {
   return (
     <article className="card">
       <h2 className="card__projectTitle">
@@ -7,21 +7,23 @@ function Card() {
 
       <div className="card__author">
         <div className="card__authorPhoto"></div>
-        <p className="card__job">Full stack Developer</p>
-        <h3 className="card__name">Emmelie Bjôrklund</h3>
+        <p className="card__job">{data.job || "Full stack Developer"}</p>
+        <h3 className="card__name">{data.name || "Emmelie Bjôrklund"}</h3>
       </div>
 
       <div className="card__project">
         <h3 className="card__name">Elegant Workspace</h3>
-        <p className="card__slogan">Diseños Exclusivos</p>
+        <p className="card__slogan">{data.slogan || "Diseños Exclusivos"}</p>
         <h3 className="card__descriptionTitle">Product description</h3>
         <p className="card__description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos?
-          Itaque, molestias eveniet laudantium adipisci vitae ratione
+          {data.desc ||
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quosItaque, molestias eveniet laudantium adipisci vitae ratione"}
         </p>
 
         <div className="card__technicalInfo">
-          <p className="card__technologies">React JS - HTML - CSS</p>
+          <p className="card__technologies">
+            {data.technologies || "React JS - HTML - CSS"}
+          </p>
 
           <a
             className="icon icon__www"

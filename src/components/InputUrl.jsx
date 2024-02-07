@@ -9,6 +9,7 @@ function InputUrl(props) {
       id={props.id}
       placeholder={props.placeholder}
       value={props.value}
+      onChange={props.onChange}
     />
   );
 }

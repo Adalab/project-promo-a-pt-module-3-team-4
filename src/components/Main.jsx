@@ -4,14 +4,14 @@ import Info from "./Info";
 import Author from "./Author";
 import Buttons from "./Buttons";
 
-function Main({ changeData }) {
+function Main({ changeData, data }) {
   return (
     <main className="main">
       <Hero />
-      <Preview />
+      <Preview data={data} />
       <form className="addForm">
-        <Info changeData={changeData} />
-        <Author />
+        <Info changeData={changeData} data={data} />
+        <Author changeData={changeData} data={data} />
         <Buttons />
       </form>
     </main>

@@ -1,4 +1,4 @@
-import useState from "react";
+import { useState } from "react";
 import "../scss/App.scss";
 import Header from "./Header";
 import Main from "./Main";
@@ -35,21 +35,23 @@ function App() {
     repo: "",
     demo: "",
     desc: "",
-    author: "",
+    autor: "",
     job: "",
     photo: "",
     image: "",
   });
 
-  const changeData = () => {
-    const cloneData = { ...data };
+  const changeData = (nameProp, newValue) => {
+    const clonData = { ...data };
+    clonData[nameProp] = newValue;
+    setData(clonData);
   };
 
   return (
     <div>
       <div className="container">
         <Header />
-        <Main changeData={changeData} />
+        <Main changeData={changeData} data={data} />
       </div>
       <Footer />
     </div>

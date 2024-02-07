@@ -1,23 +1,63 @@
 import InputText from "./InputText";
 import InputUrl from "./InputUrl";
 
-function Info({ changeData }) {
+function Info({ changeData, data }) {
+  const handleChange = (event) => {
+    const changedValue = event.currentTarget.value;
+    const attrIdOfInpunt = event.currentTarget.id;
+    changeData(attrIdOfInpunt, changedValue);
+  };
   return (
     <>
       <h2 className="title">Información</h2>
       <fieldset className="addForm__group">
         <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
-        <InputText name="name" id="name" placeholder="Nombre del proyecto" />
-        <InputText name="slogan" id="slogan" placeholder="Slogan" />
+        <InputText
+          changeData={changeData}
+          data={data}
+          name="name"
+          id="name"
+          placeholder="Nombre del proyecto"
+          onChange={handleChange}
+          value={data.name}
+        />
+        <InputText
+          changeData={changeData}
+          data={data}
+          name="slogan"
+          id="slogan"
+          placeholder="Slogan"
+          onChange={handleChange}
+          value={data.slogan}
+        />
         <div className="addForm__2col">
-          <InputUrl name="repo" id="repo" placeholder="Repositorio" />
-          <InputUrl name="demo" id="demo" placeholder="Demo" />
+          <InputUrl
+            changeData={changeData}
+            data={data}
+            name="repo"
+            id="repo"
+            placeholder="Repositorio"
+            onChange={handleChange}
+            value={data.repo}
+          />
+          <InputUrl
+            changeData={changeData}
+            data={data}
+            name="demo"
+            id="demo"
+            placeholder="Demo"
+            onChange={handleChange}
+            value={data.demo}
+          />
         </div>
         <InputText
+          changeData={changeData}
+          data={data}
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
-          changeData={changeData}
+          onChange={handleChange}
+          value={data.technologies}
         />
         <textarea
           className="addForm__input"
@@ -26,6 +66,7 @@ function Info({ changeData }) {
           id="desc"
           placeholder="Descripción"
           rows="5"
+          onChange={handleChange}
         ></textarea>
       </fieldset>
     </>
