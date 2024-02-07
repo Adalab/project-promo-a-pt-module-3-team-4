@@ -8,11 +8,11 @@ function Card({ data }) {
       <div className="card__author">
         <div className="card__authorPhoto"></div>
         <p className="card__job">{data.job || "Full stack Developer"}</p>
-        <h3 className="card__name">{data.name || "Emmelie Bjôrklund"}</h3>
+        <h3 className="card__name">{data.autor || "Emmelie Bjôrklund"}</h3>
       </div>
 
       <div className="card__project">
-        <h3 className="card__name">Elegant Workspace</h3>
+        <h3 className="card__name">{data.name || "Elegant Workspace"}</h3>
         <p className="card__slogan">{data.slogan || "Diseños Exclusivos"}</p>
         <h3 className="card__descriptionTitle">Product description</h3>
         <p className="card__description">
