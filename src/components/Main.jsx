@@ -5,6 +5,7 @@ import Author from "./Author";
 import Buttons from "./Buttons";
 
 function Main({ changeData, data }) {
+
   return (
     <main className="main">
       <Hero />

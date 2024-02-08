@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+// Adaptarlo en la función de GetAvatar
 function InputFile(props) {
   return (
     <>

@@ -1,15 +1,26 @@
-import InputFile from './InputFile'
+import GetAvatar from './GetAvatar';
 
 function Buttons() {
+
+  /*
+  const updatePhoto = (image) => {
+    updateAvatar("photo", image);
+  }
+
+  const updateImage = (image) => {
+    updateAvatar("image", image);
+  }
+  */
+
   return (
     <fieldset className="addForm__group--upload">
-      <InputFile
+      <GetAvatar updateAvatar={null/*updatePhoto*/} 
         for="image"
         text="Subir foto del proyecto"
         name="image" 
         id="image"
       />
-      <InputFile
+      <GetAvatar updateAvatar={null/*updateImage*/}
         for="photo"
         text="Subir foto de la autora"
         name="photo" 

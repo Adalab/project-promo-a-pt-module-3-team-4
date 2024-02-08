@@ -29,16 +29,16 @@ import Footer from "./Footer";
 
 function App() {
   const [data, setData] = useState({
-    name: "",
-    slogan: "",
-    technologies: "",
-    repo: "",
-    demo: "",
-    desc: "",
-    autor: "",
-    job: "",
-    photo: "",
-    image: "",
+    name: "", // Nombre del proyecto
+    slogan: "", // Slogan del proyecto
+    technologies: "", // Tecnologías
+    repo: "", // Repo
+    demo: "", // Demo
+    desc: "", // Descripción
+    autor: "", // Nombre de la autora
+    job: "", // Trabajo de la autora
+    photo: "", // Foto de la autora
+    image: "", // Foto del proyecto
   });
 
   const changeData = (nameProp, newValue) => {
