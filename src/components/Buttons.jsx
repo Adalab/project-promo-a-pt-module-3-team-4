@@ -1,26 +1,16 @@
 import GetAvatar from './GetAvatar';
 
-function Buttons() {
-
-  /*
-  const updatePhoto = (image) => {
-    updateAvatar("photo", image);
-  }
-
-  const updateImage = (image) => {
-    updateAvatar("image", image);
-  }
-  */
+function Buttons({ updateAvatarProject, updateAvatarAuthor }) {
 
   return (
     <fieldset className="addForm__group--upload">
-      <GetAvatar updateAvatar={null/*updatePhoto*/} 
+      <GetAvatar updateAvatar={updateAvatarProject} 
         for="image"
         text="Subir foto del proyecto"
         name="image" 
         id="image"
       />
-      <GetAvatar updateAvatar={null/*updateImage*/}
+      <GetAvatar updateAvatar={updateAvatarAuthor}
         for="photo"
         text="Subir foto de la autora"
         name="photo" 

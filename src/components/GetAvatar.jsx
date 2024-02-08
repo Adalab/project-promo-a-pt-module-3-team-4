@@ -57,23 +57,22 @@ function GetAvatar({updateAvatar, text='Get avatar!'}) {
   };
 
   return (
-    <div className="button">
-      <label className="get-avatar__label">
-        {text}
-        <input
-          type="file"
-          ref={myFileField}
-          style={{ display: 'none' }}
-          onChange={uploadImage}
-        />
-      </label>
-    </div>
+    <label className="button">
+      {text}
+      <input
+        className="addForm__hidden"
+        type="file"
+        ref={myFileField}
+        style={{ display: 'none' }}
+        onChange={uploadImage}
+      />
+    </label>
   );
 }
 
 GetAvatar.propTypes = {
   updateAvatar: PropTypes.func.isRequired, // Lifting de la imagen updateAvatar(image)
-  text: PropTypes.string // Texto del botón
+  text: PropTypes.string, // Texto del botón
 };
 
 export default GetAvatar;

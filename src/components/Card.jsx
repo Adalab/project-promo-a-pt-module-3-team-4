@@ -1,3 +1,5 @@
+import defaultPhoto from '../images/avatar.webp';
+
 function Card({ data }) {
   return (
     <article className="card">
@@ -6,7 +8,7 @@ function Card({ data }) {
       </h2>
 
       <div className="card__author">
-        <div className="card__authorPhoto"></div>
+        <div className="card__authorPhoto" style= {{ backgroundImage: `url(${data.photo || defaultPhoto })` }}></div>
         <p className="card__job">{data.job || "Full stack Developer"}</p>
         <h3 className="card__name">{data.autor || "Emmelie Bjôrklund"}</h3>
       </div>
@@ -27,14 +29,18 @@ function Card({ data }) {
 
           <a
             className="icon icon__www"
-            href="#"
+            href={data.repo}
+            target="_blank"
+            rel="noreferrer"
             title="Haz click para ver el proyecto online"
           >
             Web link
           </a>
           <a
             className="icon icon__github"
-            href="#"
+            href={data.demo}
+            target="_blank"
+            rel="noreferrer"
             title="Haz click para ver el código del proyecto"
           >
             GitHub link

@@ -47,11 +47,34 @@ function App() {
     setData(clonData);
   };
 
+  const updateAvatarAuthor = (photo) => {
+
+    const clonData = { ...data };
+
+    clonData.photo = photo;
+
+    setData(clonData);
+  };
+
+  const updateAvatarProject = (image) => {
+
+    const clonData = { ...data };
+
+    clonData.image = image;
+
+    setData(clonData);
+  };
+
   return (
     <div>
       <div className="container">
         <Header />
-        <Main changeData={changeData} data={data} />
+        <Main 
+          changeData={changeData} 
+          data={data} 
+          updateAvatarAuthor={updateAvatarAuthor}
+          updateAvatarProject={updateAvatarProject}
+        />
       </div>
       <Footer />
     </div>

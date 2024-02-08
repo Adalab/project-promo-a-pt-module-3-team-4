@@ -4,16 +4,25 @@ import Info from "./Info";
 import Author from "./Author";
 import Buttons from "./Buttons";
 
-function Main({ changeData, data }) {
+function Main({ changeData, data, updateAvatarAuthor, updateAvatarProject }) {
 
   return (
     <main className="main">
       <Hero />
       <Preview data={data} />
       <form className="addForm">
-        <Info changeData={changeData} data={data} />
-        <Author changeData={changeData} data={data} />
-        <Buttons />
+        <Info 
+          changeData={changeData} 
+          data={data} 
+        />
+        <Author 
+          changeData={changeData}
+          data={data} 
+        />
+        <Buttons 
+          updateAvatarAuthor={updateAvatarAuthor}
+          updateAvatarProject={updateAvatarProject}
+        />
       </form>
     </main>
   );
