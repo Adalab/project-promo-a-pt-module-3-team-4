@@ -47,8 +47,21 @@ function App() {
     setData(clonData);
   };
 
-  const updateAvatarAuthor = (photo) => {
+  const [responseFetch, setResponseFetch] = useState("");
 
+  const handleFetchCreate = () => {
+    fetch("https://dev.adalab.es/api/projectCard", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json())
+      .then((dataResponse) => {
+        setResponseFetch(dataResponse);
+      });
+  };
+
+  const updateAvatarAuthor = (photo) => {
     const clonData = { ...data };
 
     clonData.photo = photo;
@@ -57,7 +70,6 @@ function App() {
   };
 
   const updateAvatarProject = (image) => {
-
     const clonData = { ...data };
 
     clonData.image = image;
@@ -69,11 +81,13 @@ function App() {
     <div>
       <div className="container">
         <Header />
-        <Main 
-          changeData={changeData} 
-          data={data} 
+        <Main
+          changeData={changeData}
+          data={data}
           updateAvatarAuthor={updateAvatarAuthor}
           updateAvatarProject={updateAvatarProject}
+          onSubmit={handleFetchCreate}
+          responseFetch={responseFetch}
         />
       </div>
       <Footer />

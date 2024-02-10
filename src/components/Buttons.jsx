@@ -1,22 +1,37 @@
-import GetAvatar from './GetAvatar';
-
-function Buttons({ updateAvatarProject, updateAvatarAuthor }) {
-
+import GetAvatar from "./GetAvatar";
+import ButtonSave from "./ButtonSave";
+function Buttons({
+  updateAvatarProject,
+  updateAvatarAuthor,
+  onSubmit,
+  responseFetch,
+}) {
   return (
     <fieldset className="addForm__group--upload">
-      <GetAvatar updateAvatar={updateAvatarProject} 
+      <GetAvatar
+        updateAvatar={updateAvatarProject}
         for="image"
         text="Subir foto del proyecto"
-        name="image" 
+        name="image"
         id="image"
       />
-      <GetAvatar updateAvatar={updateAvatarAuthor}
+      <GetAvatar
+        updateAvatar={updateAvatarAuthor}
         for="photo"
         text="Subir foto de la autora"
-        name="photo" 
+        name="photo"
         id="photo"
       />
-      <button className="button--large">Guardar proyecto</button>
+      <ButtonSave onSubmit={onSubmit} />
+      {responseFetch !== "" && responseFetch.success && (
+        <p>
+          Tu proyecto ha sido creado en la siguiente dirección:{""}
+          <a href={responseFetch.cardURL}>{responseFetch.cardURL}</a>
+        </p>
+      )}
+      {responseFetch !== "" && !responseFetch.success && (
+        <p>Ha ocurridio un error: {responseFetch.error}</p>
+      )}
     </fieldset>
   );
 }
