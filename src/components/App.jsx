@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import "../scss/App.scss";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import localStorage from "../services/localStorage";
+import { get, set } from "../services/localStorage.js";
 
 //import avatarImage from '../images/avatar.webp'
 //import ebookImage from '../images/ebook-example.jpeg'
@@ -29,18 +30,20 @@ import localStorage from "../services/localStorage";
 //     - Footer
 
 function App() {
-  const [data, setData] = useState({
-    name: "", // Nombre del proyecto
-    slogan: "", // Slogan del proyecto
-    technologies: "", // Tecnologías
-    repo: "", // Repo
-    demo: "", // Demo
-    desc: "", // Descripción
-    autor: "", // Nombre de la autora
-    job: "", // Trabajo de la autora
-    photo: "", // Foto de la autora
-    image: "", // Foto del proyecto
-  });
+  const [data, setData] = useState(
+    get("project", {
+      name: "", // Nombre del proyecto
+      slogan: "", // Slogan del proyecto
+      technologies: "", // Tecnologías
+      repo: "", // Repo
+      demo: "", // Demo
+      desc: "", // Descripción
+      autor: "", // Nombre de la autora
+      job: "", // Trabajo de la autora
+      photo: "", // Foto de la autora
+      image: "", // Foto del proyecto
+    })
+  );
 
   const changeData = (nameProp, newValue) => {
     const clonData = { ...data };
@@ -49,6 +52,10 @@ function App() {
   };
 
   const [responseFetch, setResponseFetch] = useState("");
+
+  useEffect(() => {
+    set("project", data);
+  }, [data]);
 
   const handleFetchCreate = () => {
     fetch("https://dev.adalab.es/api/projectCard", {
