@@ -10,11 +10,9 @@ En este proyecto vamos es una aplicación web que permite crear una página para
 
 ### **Cómo usar la aplicación:**
 
-- **Rellenar:** Completa los campos de tu proyecto con nombre, slogan, tegn
+- **Rellenar:** Completa los campos de tu proyecto con nombre, slogan, descripción, tecnologías, repositorio y demo. Además, puedes contarnos. Más sobre la autora y subir su fotografía, que se actualizará en la tarjeta para que veas la vista previa correspondiente.
 
-ompleta los campos de información personal con tu nombre, puesto, imagen de perfil, correo electrónico, teléfono, LinkedIn y GitHub. La vista previa se actualizará automáticamente.
-
-- **Compartir:**
+- **Compartir:** Una vez rellanada toda la información y tras el pulsar el botón "Guardar proyecto", te aparecerá una url que podrás compartir con quien desees. Recuerda completar todos los campos, en caso contrario te informaremos de cuáles faltan.
 
 ### **Autoría 👩‍💻**
 
@@ -22,3 +20,5 @@ ompleta los campos de información personal con tu nombre, puesto, imagen de per
 - [Esther García](https://github.com/esgab)
 - [Marta Almeida](https://github.com/Marta-Af)
 - [Indra Kishinchand](https://github.com/INDRAKL)
+
+¡GRACIAS!
