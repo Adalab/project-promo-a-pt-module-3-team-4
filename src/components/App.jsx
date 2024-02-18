@@ -9,7 +9,7 @@ import { get, set } from "../services/localStorage.js";
 
 function App() {
   const [data, setData] = useState(
-    get("project", {
+    get("data", {
       name: "", // Nombre del proyecto
       slogan: "", // Slogan del proyecto
       technologies: "", // Tecnologías
@@ -32,7 +32,7 @@ function App() {
   const [responseFetch, setResponseFetch] = useState("");
 
   useEffect(() => {
-    set("project", data);
+    set("data", data);
   }, [data]);
 
   const handleFetchCreate = () => {
