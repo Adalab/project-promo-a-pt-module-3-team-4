@@ -14,38 +14,7 @@ En este proyecto vamos es una aplicación web que permite crear una página para
 
 ompleta los campos de información personal con tu nombre, puesto, imagen de perfil, correo electrónico, teléfono, LinkedIn y GitHub. La vista previa se actualizará automáticamente.
 
-- **Compartir:** Haz clic en "Crear tarjeta" para generar tu tarjeta única y obtener un enlace para compartirla. También puedes compartir directamente en Twitter haciendo clic en el botón correspondiente.
-
-## **Guía de inicio rápido 🔍**
-
-Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
-
-> **NOTA:** Asegúrate de tener instalado [Node JS](https://nodejs.org/)
-
-### Pasos para ejecutar el ejercicio ▶️
-
-Ejecuta estos comandos en la terminal
-
-1. **Clona el repositorio**:
-
-```bash
- git clone https://beta.adalab.es/project-promo-a-module-2-team-2/
-```
-
-2. Instala las **dependencias locales**:
-
-```bash
-npm install
-```
-
-3. **Arranca el proyecto**:
-
-```bash
-npm run dev
-```
-
-Este comando:
-**Abre automáticamente una ventana en el navegador y muestra la página web**
+- **Compartir:**
 
 ### **Autoría 👩‍💻**
 
