@@ -67,6 +67,7 @@ function Info({ changeData, data }) {
           placeholder="Descripción"
           rows="5"
           onChange={handleChange}
+          value={data.desc}
         ></textarea>
       </fieldset>
     </>
