@@ -6,6 +6,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { get, set } from "../services/localStorage.js";
+import HomePage from "./Homepage";
 
 function App() {
   const [data, setData] = useState(
@@ -67,14 +68,22 @@ function App() {
     <div>
       <div className="container">
         <Header />
-        <Main
-          changeData={changeData}
-          data={data}
-          updateAvatarAuthor={updateAvatarAuthor}
-          updateAvatarProject={updateAvatarProject}
-          onSubmit={handleFetchCreate}
-          responseFetch={responseFetch}
-        />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/main"
+            element={
+              <Main
+                changeData={changeData}
+                data={data}
+                updateAvatarAuthor={updateAvatarAuthor}
+                updateAvatarProject={updateAvatarProject}
+                onSubmit={handleFetchCreate}
+                responseFetch={responseFetch}
+              />
+            }
+          />
+        </Routes>
       </div>
       <Footer />
     </div>
