@@ -27,13 +27,13 @@ function Buttons({
       />
       <ButtonSave onSubmit={onSubmit} />
       {responseFetch !== "" && responseFetch.success && (
-        <p>
+        <p className="upload-error">
           Tu proyecto ha sido creado en la siguiente dirección:{""}
-          <a href={responseFetch.cardURL}>{responseFetch.cardURL}</a>
+          <a className="upload-link" href={responseFetch.cardURL}>{responseFetch.cardURL}</a>
         </p>
       )}
       {responseFetch !== "" && !responseFetch.success && (
-        <p>Ha ocurridio un error: {responseFetch.error}</p>
+        <p className="upload-error">Ha ocurridio un error: {responseFetch.error}</p>
       )}
     </fieldset>
   );

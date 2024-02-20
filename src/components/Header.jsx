@@ -1,20 +1,21 @@
+import { Link } from "react-router-dom";
+
 import laptopImage from "../images/laptop-code-solid.svg";
 
 function Header() {
   return (
     <header className="header">
-      <a
-        className="header__brand"
-        href="./"
-        title="Haz click para volver a la página inicial"
-      >
-        <img
-          className="header__companyLogo"
-          src={laptopImage}
-          alt="Logo proyectos molones"
-        />
-        <h1 className="header__title">Proyectos molones</h1>
-      </a>
+      <Link to="/">
+        <div className="header__brand">
+          <img
+            className="header__companyLogo"
+            src={laptopImage}
+            alt="Logo proyectos molones"
+          />
+          <h1 className="header__title">Proyectos molones</h1>
+        </div>
+      </Link>
+
       {/*
       <div className="comparte">
         <span className="header__title">Comparte tu proyecto</span>
