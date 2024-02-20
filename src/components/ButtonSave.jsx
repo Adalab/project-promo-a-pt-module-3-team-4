@@ -13,7 +13,7 @@ function ButtonSave({ onSubmit }) {
 }
 
 ButtonSave.propTypes = {
-  text: PropTypes.string.isRequiered,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default ButtonSave;

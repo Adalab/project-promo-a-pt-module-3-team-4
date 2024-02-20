@@ -6,7 +6,8 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { get, set } from "../services/localStorage.js";
-import HomePage from "./Homepage";
+import Landing from "./Landing";
+import Catalog from "./Catalog";
 
 function App() {
   const [data, setData] = useState(
@@ -69,7 +70,8 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage data={data}/>} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/catalog" element={<Catalog data={data}/>} />
           <Route
             path="/main"
             element={

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import defaultPhoto from '../images/avatar.webp';
 
 function Card({ data }) {
@@ -50,5 +52,9 @@ function Card({ data }) {
     </article>
   );
 }
+
+Card.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default Card;

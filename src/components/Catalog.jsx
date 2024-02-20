@@ -1,17 +1,14 @@
 import PropTypes from "prop-types";
 
-import { Link } from "react-router-dom";
-
 import Card from "./Card";
+import Hero from "./Hero";
 
-function HomePage( {data} ) {
+function Catalog( {data} ) {
+
+  
   return (
     <div className="home-page-container homepage">
-      <h1 className="homepage__title">Proyectos molones</h1> 
-      <p className="homepage__description">Escaparate en línea para recoger ideas a través de la tecnología.</p> 
-      <Link to="/main">
-        <button className="homepage__button button--link">Nuevo proyecto</button>
-      </Link>
+      <Hero linkTo="/main" text="Nuevo proyecto" />
       <ul className="homepage__projects">
         <li className="homepage__project"><Card data={data} /></li>
         <li className="homepage__project"><Card data={data} /></li>
@@ -22,8 +19,8 @@ function HomePage( {data} ) {
   );
 }
 
-HomePage.propTypes = {
-  data: PropTypes.array.isRequired,
+Catalog.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
-export default HomePage;
+export default Catalog;

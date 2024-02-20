@@ -62,12 +62,15 @@ fieldset {
 .container {
   padding: 22px 22px 0 22px;
   background-color: var(--color-dark);
+  background: rgb(187,159,208);
+  background: radial-gradient(circle, rgba(187,159,208,1) 0%, rgba(111,157,212,1) 100%);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.5rem;
+  
 }
 
 .header .header__brand {
@@ -265,6 +268,8 @@ fieldset {
     var(--color-dusk),
     #211e2e 92%
   );
+  background: rgb(88,124,193);
+  background: radial-gradient(circle, rgba(88,124,193,1) 0%, rgba(149,127,176,1) 100%); 
 }
 
 .addForm .title {
@@ -290,19 +295,10 @@ fieldset {
   right: 0;
   bottom: 0;
   left: 0;
-
   margin-bottom: -2px;
   border-radius: inherit;
   background-color: transparent;
-  background-image: linear-gradient(
-    to left,
-    transparent,
-    #343045 25%,
-    #c0b7e8 45%,
-    var(--color-dark-lilac) 65%,
-    #343045 75%,
-    transparent
-  );
+  background-image: linear-gradient(to left, transparent, #ffffff66 25%, #c1bdd3 45%, #b8ade3 65%, #ffffff66 75%, transparent);
 }
 
 .addForm .addForm__group {
@@ -315,7 +311,7 @@ fieldset {
   margin: 10px auto;
 
   padding: 8.5px 16px 8.5px 16px;
-  border-radius: 40px;
+  border-radius: 20px;
   border: solid 2px var(--color-white);
 
   color: var(--color-white);
@@ -325,7 +321,7 @@ fieldset {
 }
 
 .addForm .addForm__input::placeholder {
-  color: var(--color-white-50);
+  color: var(--color-white-80);
 }
 
 .addForm .addForm__group--upload {
@@ -362,6 +358,7 @@ fieldset {
 .title {
   text-align: center;
   text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .logoSponsor {
@@ -371,23 +368,21 @@ fieldset {
 .button--link {
   display: block;
   width: fit-content;
-
   margin-inline: auto;
   margin-block: 8px;
-  padding: 5px 18px;
+  padding: 10px 20px;
   color: var(--color-white);
   font: var(--font-button);
   text-transform: uppercase;
   text-decoration: none;
-
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-style: solid;
   border-width: 1px;
-  border-image-source: linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
-  border-image-slice: 1;
   border-radius: 20px;
   background-color: var(--color-dark-lilac);
+  border: none;
+  cursor: pointer;
   /*
   background-image: linear-gradient(to bottom, var(--color-dark-lilac), var(--color-dark-lilac)), linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
@@ -399,7 +394,6 @@ fieldset {
   display: block;
   min-width: 120px;
   max-width: 150px;
-
   margin: 8px;
   padding: 5px 18px;
   color: var(--color-white);
@@ -407,15 +401,19 @@ fieldset {
   text-transform: none;
   text-decoration: none;
   text-align: center;
-
+  border-width: 3px;
   border-radius: 40px;
-  background-image: linear-gradient(
-    to right,
-    var(--color-dark-lilac) -2%,
-    #c0b7e8 98%
-  );
-
+  background-image: linear-gradient(to right, var(--color-dark-lilac) -2%, #c6b7e8 98%);
+  border-color: linear-gradient(to right, var(--color-dark-lilac) -2%, #c6b7e8 98%);
   cursor: pointer;
+  line-height: 15px;
+  transition:.5s;
+  &:hover {
+    background-image: none;
+    background-color: var(--color-white);
+    color: var(--color-dark-lilac);
+
+  }
 }
 
 .button--large {
@@ -429,7 +427,7 @@ fieldset {
   text-transform: none;
   text-decoration: none;
   text-align: center;
-
+  cursor: pointer;
   border-radius: 40px;
   background-color: transparent;
   background-image: linear-gradient(
@@ -507,8 +505,8 @@ fieldset {
     width: 205px;
     margin-inline: auto;
     margin-block: 8px;
-    padding: 7px 18px 6px;
-    color: black;
+    padding: 10px 20px;
+    color: var(--color-dark-lilac);
     font: var(--font-button);
     text-transform: uppercase;
     text-decoration: none;

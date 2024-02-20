@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+
+
 import Hero from "./Hero";
 import Preview from "./Preview";
 import Info from "./Info";
@@ -14,7 +17,7 @@ function Main({
 }) {
   return (
     <main className="main">
-      <Hero />
+      <Hero linkTo="/catalog" text="Ver proyectos" />
       <Preview data={data} />
       <form className="addForm">
         <Info changeData={changeData} data={data} />
@@ -29,5 +32,14 @@ function Main({
     </main>
   );
 }
+
+Main.propTypes = {
+  changeData: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+  updateAvatarAuthor: PropTypes.func.isRequired,
+  updateAvatarProject: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  responseFetch: PropTypes.string.isRequired,
+};
 
 export default Main;

@@ -1,5 +1,4 @@
 import laptopImage from "../images/laptop-code-solid.svg";
-import adalabImage from "../images/adalab.png";
 
 function Header() {
   return (
@@ -16,7 +15,12 @@ function Header() {
         />
         <h1 className="header__title">Proyectos molones</h1>
       </a>
-      <img className="logoSponsor" src={adalabImage} alt="Logo Adalab" />
+      {/*
+      <div className="comparte">
+        <span className="header__title">Comparte tu proyecto</span>
+        <img className="logoSponsor" src={adalabImage} alt="Logo Adalab" />
+      </div>
+      */}
     </header>
   );
 }

@@ -1,5 +1,8 @@
+import PropTypes from "prop-types";
+
 import GetAvatar from "./GetAvatar";
 import ButtonSave from "./ButtonSave";
+
 function Buttons({
   updateAvatarProject,
   updateAvatarAuthor,
@@ -35,5 +38,12 @@ function Buttons({
     </fieldset>
   );
 }
+
+Buttons.propTypes = {
+  updateAvatarAuthor: PropTypes.func.isRequired,
+  updateAvatarProject: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  responseFetch: PropTypes.string.isRequired,
+};
 
 export default Buttons;

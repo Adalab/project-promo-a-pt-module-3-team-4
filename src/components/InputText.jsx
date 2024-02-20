@@ -18,7 +18,8 @@ InputText.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string,
   placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default InputText;

@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 import Card from "./Card";
 
-import defaultImage from "../images/ebook-example.jpg";
+import defaultImage from "../images/design-example.jpg";
 
 function Preview({ data }) {
   return (
@@ -13,5 +15,9 @@ function Preview({ data }) {
     </section>
   );
 }
+
+Preview.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default Preview;
